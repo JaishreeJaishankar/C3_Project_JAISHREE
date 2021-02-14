@@ -77,7 +77,7 @@ class RestaurantTest {
         List<String> itemsSelected = new ArrayList<String>();
         itemsSelected.add("Sweet corn soup");
         itemsSelected.add("Sizzling brownie");
-        //restaurant.findTotalCost(itemsSelected) should be implemented
+
         assertEquals(438,restaurant.findTotalCost(itemsSelected));
     }
 
