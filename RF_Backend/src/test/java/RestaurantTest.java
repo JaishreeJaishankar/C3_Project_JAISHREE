@@ -67,5 +67,19 @@ class RestaurantTest {
         assertThrows(itemNotFoundException.class,
                 ()->restaurant.removeFromMenu("French fries"));
     }
+
+    @Test
+    public void computed_total_cost_for_selected_two_items_of_price_119_and_319_should_be_438(){
+        restaurant.addToMenu("Sweet corn soup",119);
+        restaurant.addToMenu("Vegetable lasagne", 269);
+        restaurant.addToMenu("Sizzling brownie",319);
+
+        List<String> itemsSelected = new ArrayList<String>();
+        itemsSelected.add("Sweet corn soup");
+        itemsSelected.add("Sizzling brownie");
+        //restaurant.findTotalCost(itemsSelected) should be implemented
+        assertEquals(438,restaurant.findTotalCost(itemsSelected));
+    }
+
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
