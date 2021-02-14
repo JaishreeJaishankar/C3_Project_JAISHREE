@@ -30,10 +30,7 @@ public class Restaurant {
 
     public List<Item> getMenu() {
         return menu;
-        //DELETE ABOVE RETURN STATEMENT AND WRITE CODE HERE
     }
-
-
 
     private Item findItemByName(String itemName){
         for(Item item: menu) {
@@ -49,20 +46,19 @@ public class Restaurant {
     }
 
     public void removeFromMenu(String itemName) throws itemNotFoundException {
-
         Item itemToBeRemoved = findItemByName(itemName);
         if (itemToBeRemoved == null)
             throw new itemNotFoundException(itemName);
 
         menu.remove(itemToBeRemoved);
     }
+
     public void displayDetails(){
         System.out.println("Restaurant:"+ name + "\n"
                 +"Location:"+ location + "\n"
                 +"Opening time:"+ openingTime +"\n"
                 +"Closing time:"+ closingTime +"\n"
                 +"Menu:"+"\n"+getMenu());
-
     }
 
     public String getName() {
